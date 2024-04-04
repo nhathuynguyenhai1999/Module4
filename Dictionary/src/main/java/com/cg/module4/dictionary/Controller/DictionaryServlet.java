@@ -15,12 +15,7 @@ public class DictionaryServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<html><head><title>Dictionary Result<title><head><body>");
         out.println("<h1>Result for " + word + ":<h1>");
-        if(meaning !=  null){
-            out.println("<p>Meaning: " + meaning + "</p>");
-        }
-        else{
-            out.println("<p>Meaning not found.</p>");
-        }
+        out.println("<p>Meaning: " + meaning + "</p>");
         out.println("<body><html>");
         out.close();
 //        super.doPost(req, resp);
