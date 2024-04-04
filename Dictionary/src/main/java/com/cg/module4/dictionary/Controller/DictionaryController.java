@@ -1,4 +1,4 @@
-package com.cg.module4.dictionary.Model;
+package com.cg.module4.dictionary.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
