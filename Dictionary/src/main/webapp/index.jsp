@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>English-Vietnamese Dictionary</h1>
-<form action="search" method="post">
+<form action="search?=name" method="post">
     <label for="word">Enter a word:</label>
     <input type="text" id="word" name="word">
     <button type="submit">Search</button>

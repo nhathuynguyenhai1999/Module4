@@ -6,12 +6,12 @@
     <display-name>Spring MVC</display-name>
     <!--Servlet Mapping-->
     <servlet>
-        <servlet-name>DictionaryServlet</servlet-name>
-        <servlet-class>com.cg.module4.dictionary.Controller.DictionaryServlet</servlet-class>
+        <servlet-name>DictionaryController</servlet-name>
+        <servlet-class>com.cg.module4.dictionary.Model.DictionaryServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DictionaryServlet</servlet-name>
+        <servlet-name>DictionaryController</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     <!--Context Param-->
