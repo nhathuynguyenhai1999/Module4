@@ -11,6 +11,5 @@ public interface IProductService {
     void updateProduct(Product product);
     void deleteProduct(Long id);
     List<Product> searchByNames(String keyword);
-
     List<Product> searchByName(String keyword);
 }

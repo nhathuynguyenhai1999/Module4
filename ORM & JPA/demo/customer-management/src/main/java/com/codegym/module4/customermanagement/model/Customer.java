@@ -1,21 +1,18 @@
-package com.codegym.module4.customermanagementthymeleaf.Model;
+package com.codegym.module4.customermanagement.model;
 
-import org.hibernate.HibernateException;
-import org.hibernate.SessionFactory;
-import org.springframework.context.annotation.Configuration;
+import javax.persistence.*;
 
-import javax.persistence.EntityManager;
-@Configuration
+@Entity
+@Table(name = "customer")
 public class Customer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String email;
     private String address;
-    private static SessionFactory sessionFactory;
-    private static EntityManager entityManager;
-    public Customer() {
-    }
-    public Customer(int id, String name, String email, String address) {
+    public Customer(){}
+    public Customer(int id, String name, String email, String address){
         this.id = id;
         this.name = name;
         this.email = email;

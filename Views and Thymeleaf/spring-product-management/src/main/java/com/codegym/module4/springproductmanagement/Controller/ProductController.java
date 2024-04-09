@@ -8,9 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class ProductController {
     private final IProductService productService;
+    private final List<Product> products = new ArrayList<>();
     public ProductController(IProductService productService) {
         this.productService = productService;
     }
@@ -54,6 +58,9 @@ public class ProductController {
     @GetMapping("/delete")
     public String deleteProduct(@RequestParam Long id) {
         // implementation to delete product
+        products.removeIf(product -> product.getId().equals(id));
+        productService.deleteProduct(id);
+        return "redirect:/";
     }
 
     @GetMapping("/detail")

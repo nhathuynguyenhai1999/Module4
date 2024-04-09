@@ -7,6 +7,9 @@ public class Product {
     private String description;
     private String manufacturer;
 
+    public Product() {
+    }
+
     public Long getId() {
         return id;
     }
