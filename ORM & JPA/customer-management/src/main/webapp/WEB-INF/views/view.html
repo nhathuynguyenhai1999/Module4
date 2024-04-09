@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:include="layout::layout">
+<head>
+    <title>View Customer</title>
+</head>
+<body>
+<div th:replace="layout::header"></div>
+
+<h2>View Customer Details</h2>
+<!-- Display customer details -->
+<p>Name: <span th:text="${customer.name}"></span></p>
+<p>Email: <span th:text="${customer.email}"></span></p>
+
+<div th:replace="layout::footer"></div>
+</body>
+</html>
