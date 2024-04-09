@@ -30,10 +30,15 @@ public class CustomerRepository implements ICustomerRepository {
 
     @Override
     public void save(Customer customer) {
-        if (customer.getId() != null) {
-            entityManager.merge(customer);
-        } else {
-            entityManager.persist(customer);
+        try {
+            if (customer.getId() != null) {
+                entityManager.merge(customer);
+            } else {
+                entityManager.persist(customer);
+            }
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
         }
     }
 
