@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd32aa88-e697-481c-b5c5-5f461e16e3ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/configuration/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/configuration/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/repository/IStudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/configuration/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/service/SongService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/service/SongService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/hibernate.conf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/templates/song-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/templates/song-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,6 +280,7 @@
       <workItem from="1712694359152" duration="199000" />
       <workItem from="1712694584959" duration="181000" />
       <workItem from="1712740691897" duration="16000" />
+      <workItem from="1712764549399" duration="610000" />
     </task>
     <servers />
   </component>
