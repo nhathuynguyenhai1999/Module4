@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Song List</title>
+</head>
+<body>
+<h2>Song List</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.name}">Name</td>
+        <td th:text="${student.description}">Description</td>
+        <td th:text="${student.genre}">Genre</td>
+        <td>
+            <a th:href="@{/students/delete/{id}(id=${student.id})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<form action="/songs" method="post" th:object="${student}">
+    <input type="text" th:field="*{student.name}" placeholder="Name">
+    <input type="text" th:field="*{student.description}" placeholder="Description">
+    <input type="text" th:field="*{student.genre}" placeholder="Genre">
+    <input type="text" th:field="*{student.filePath}" placeholder="File Path">
+    <button type="submit">Add Song</button>
+</form>
+</body>
+</html>

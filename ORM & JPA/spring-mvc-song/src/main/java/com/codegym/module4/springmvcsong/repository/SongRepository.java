@@ -1,13 +1,15 @@
 package com.codegym.module4.springmvcsong.repository;
 import com.codegym.module4.springmvcsong.model.Song;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-public interface SongRepository implements JpaRepository<Song,Long> {
-    List<Song> findAll();
+@Repository
+public interface SongRepository extends JpaRepository<Song,Long> {
+//    List<Song> findAll();
 
-    void save(Song song);
+//    void save(Song song);
 
-    void deleteById(Long id);
+//    void deleteById(Long id);
 }

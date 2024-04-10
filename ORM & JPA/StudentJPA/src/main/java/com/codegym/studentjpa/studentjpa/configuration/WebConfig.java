@@ -1,6 +1,6 @@
-package com.codegym.module4.springmvcsong.configuration;
+package com.codegym.studentjpa.studentjpa.configuration;
+
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -20,33 +20,31 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
+
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.thymeleaf.templatemode.TemplateMode;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
-
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.codegym.module4.springmvcsong")
-@EnableJpaRepositories("com.codegym.module4.springmvcsong.repository")
+@ComponentScan(basePackages = "com.codegym.studentjpa.studentjpa")
+@EnableJpaRepositories("com.codegym.studentjpa.studentjpa.repository")
 @EnableTransactionManagement
 public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/music/**")
-                .addResourceLocations("file:/path/to/music/files/");
-    }
-
     private ApplicationContext applicationContext;
-
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
     }
-
-    //Cấu hình Thymeleaf
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry){
+        registry.addResourceHandler("/student/**")
+                .addResourceLocations("file:/path/to/student/files/");
+    }
+    // Thymeleaf
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
@@ -72,18 +70,17 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
         viewResolver.setCharacterEncoding("UTF-8");
         return viewResolver;
     }
-    // JPA Configuration
+    //JPA Configuration
     @Bean
-    @Qualifier(value = "entityManager")
-    public EntityManager entityManager(EntityManagerFactory entityManagerFactory) {
+    @Qualifier(value = "enityManager")
+    public EntityManager entityManager(EntityManagerFactory entityManagerFactory){
         return entityManagerFactory.createEntityManager();
     }
-
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(getDataSource());
-        em.setPackagesToScan("com.codegym.module4.springmvcsong.model");
+        em.setPackagesToScan("com.codegym.studentjpa.studentjpa.model");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
@@ -95,7 +92,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/db_music?characterEncoding=UTF-8");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/student_list?characterEncoding=UTF-8");
         dataSource.setUsername("root");
         dataSource.setPassword("0848101999");
         return dataSource;

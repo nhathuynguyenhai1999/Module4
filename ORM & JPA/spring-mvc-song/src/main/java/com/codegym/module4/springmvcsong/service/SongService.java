@@ -11,12 +11,13 @@ import java.util.List;
 @Service
 public class SongService {
 
-    private final SongRepository songRepository; // Khai báo final để inject dependency
+    @Autowired
+    private SongRepository songRepository; // Khai báo final để inject dependency
 
-    @Autowired // Annotation để Spring inject dependency tự động
-    public SongService(SongRepository songRepository) {
-        this.songRepository = songRepository;
-    }
+//    @Autowired // Annotation để Spring inject dependency tự động
+//    public SongService(SongRepository songRepository) {
+//        this.songRepository = songRepository;
+//    }
 
     public List<Song> getAllSongs() {
         return songRepository.findAll();

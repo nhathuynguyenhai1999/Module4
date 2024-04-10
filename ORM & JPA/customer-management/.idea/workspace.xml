@@ -5,60 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd32aa88-e697-481c-b5c5-5f461e16e3ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/java/com/codegym/module4/customerormjpa/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/java/com/codegym/module4/customerormjpa/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/java/com/codegym/module4/customerormjpa/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/java/com/codegym/module4/customerormjpa/service/ImplCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/java/com/codegym/module4/customerormjpa/service/impl/CustomerServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/resources/templates/layout/7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Customer-ORM-Jpa/src/main/resources/templates/layout/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Configuration/AppConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Configuration/AppInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Controller/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Model/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Service/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Service/HibernateCustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Service/HibernateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Service/ICustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/Service/IGenerateService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/repository/CustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/repository/ICustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/module4/customermanagementthymeleaf/repository/IGenerateRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/views/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/views/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/views/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/views/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/views/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/views/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.conf.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/configuration/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentJPA/src/main/java/com/codegym/studentjpa/studentjpa/repository/IStudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/configuration/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/configuration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/service/SongService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/java/com/codegym/module4/springmvcsong/service/SongService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/hibernate.conf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/hibernate.conf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/templates/song-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-mvc-song/src/main/resources/templates/song-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,6 +289,7 @@
       <workItem from="1712687092746" duration="6757000" />
       <workItem from="1712694359152" duration="199000" />
       <workItem from="1712694584959" duration="181000" />
+      <workItem from="1712740691897" duration="16000" />
     </task>
     <servers />
   </component>
