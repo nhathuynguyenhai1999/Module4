@@ -23,17 +23,15 @@ public class StudentController {
         model.addAttribute("students", students);
         return "home";
     }
-//
-//    @PostMapping("/students")
-//    public String saveStudent(@ModelAttribute("student") Student student) {
-//        studentService.saveStudent(student);
-//        return "redirect:/students";
-//    }
-//
-//    @GetMapping("/students/delete/{id}")
-//    public String deleteStudent(@PathVariable("id") Long id) {
-//        studentService.deleteStudent(id);
-//        return "redirect:/students";
-//    }
+    @PostMapping("/students")
+    public String saveStudent(@ModelAttribute("student") Student student) {
+        studentService.saveStudent(student);
+        return "redirect:/students";
+    }
+    @GetMapping("/students/delete/{id}")
+    public String deleteStudent(@PathVariable("id") Long id) {
+        studentService.deleteStudent(id);
+        return "redirect:/students";
+    }
 }
 
