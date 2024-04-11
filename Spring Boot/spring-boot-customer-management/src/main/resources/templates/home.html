@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Sờ pơ ring bụt</h1>
+    <form action="/customer" method="GET">
+        <div class="form-group">
+            <label>
+                <input type="text" class="form-control" name="id" placeholder="Search by id">
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <div>
+        <a href="/home">Home</a>
+    </div>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <td>Id</td>
+                <td>firstName</td>
+                <td>lastName</td>
+                <td>Action</td>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cus:${customer}">
+                    <td th:text="${cus.id}"></td>
+                    <td th:text="${cus.firstName}"></td>
+                    <td th:text="${cus.lastName}"></td>
+                    <td><a>edit</a>
+                        | <a href="/remove?id=">delete</a>
+                        | <a>view</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
