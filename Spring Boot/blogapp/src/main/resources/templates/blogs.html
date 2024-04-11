@@ -6,6 +6,43 @@
 </head>
 <body>
     <h1>SHOW BLOGS</h1>
+    <h3>Categories</h3>
+    <p>
+        <a th:href="@{/blog/create}">
+            Add new category
+        </a>
+    </p>
+<!--    <p>-->
+<!--        <a th:href="@{/tasks}">-->
+<!--            Task list-->
+<!--        </a>-->
+<!--    </p>-->
+    <div class="notify">
+        <div th:if="${message}">
+            <span th:text="${message}"></span>
+        </div>
+    </div>
 
+    <table id = "tasks">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Action</th>
+<!--            <th>Delete</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="c, cStatus : ${blog}">
+            <td th:text="${cStatus.count}"></td>
+            <td><a th:href="@{/blog/view-blog/{id}(id=${blog.getId()})}" th:text="${blog.getName()}"></a></td>
+            <td th:text="${blog.getTitle()}"></td>
+            <td><a th:href="@{/blog/update/{id}(id=${c.getId()})}">update</a></td>
+            <td><a th:href="@{/blog/delete/{id}(id=${c.getId()})}">delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <footer th:replace="/layout :: footer"></footer>
 </body>
 </html>

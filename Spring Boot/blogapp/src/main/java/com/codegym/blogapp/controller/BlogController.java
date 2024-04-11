@@ -14,7 +14,7 @@ import java.util.List;
 public class BlogController {
     @Autowired
     private BlogService blogService;
-    @GetMapping("/blog")
+    @GetMapping
     public String showBlogs(){
         List<Blog> blogList = blogService.findAllBlogs();
         return "blogs";
