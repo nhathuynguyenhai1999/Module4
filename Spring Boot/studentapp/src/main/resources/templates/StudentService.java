@@ -1,4 +1,4 @@
-package com.codegym.studentjpa.studentjpa.service;
+package templates;
 
 import com.codegym.studentjpa.studentjpa.model.Student;
 import com.codegym.studentjpa.studentjpa.repository.IStudentRepository;
@@ -15,10 +15,10 @@ public class StudentService{
     public List<Student> getAllStudents(){
         return studentRepository.findAll();
     }
-//    public void saveStudent(Student student){
-//        studentRepository.save(student);
-//    }
-//    public void deleteStudent(Long id){
-//        studentRepository.deleteById(id);
-//    }
+    public void saveStudent(Student student){
+        studentRepository.save(student);
+    }
+    public void deleteStudent(Long id){
+        studentRepository.deleteById(id);
+    }
 }
