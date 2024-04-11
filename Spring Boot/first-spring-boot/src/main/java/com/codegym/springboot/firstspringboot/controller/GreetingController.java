@@ -1,4 +1,4 @@
-package com.codegym.springboot.firstspringboot;
+package com.codegym.springboot.firstspringboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
