@@ -36,7 +36,7 @@ import javax.persistence.EntityManagerFactory;
 @ComponentScan("com.codegym.validate.validateinforuser")
 @EnableTransactionManagement
 @EnableSpringDataWebSupport
-@EnableJpaRepositories("com.codegym.validate.validateinforuser")
+//@EnableJpaRepositories("com.codegym.validate.validateinforuser")
 public class AppConfiguration implements WebMvcConfigurer,ApplicationContextAware {
         private ApplicationContext applicationContext;
         @Override
@@ -82,7 +82,7 @@ public class AppConfiguration implements WebMvcConfigurer,ApplicationContextAwar
         public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
             LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
             em.setDataSource(dataSource());
-            em.setPackagesToScan("com.codegym.model");
+            em.setPackagesToScan("com.codegym.validate.validateinforuser");
 
             JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
             em.setJpaVendorAdapter(vendorAdapter);
@@ -94,9 +94,9 @@ public class AppConfiguration implements WebMvcConfigurer,ApplicationContextAwar
         public DataSource dataSource() {
             DriverManagerDataSource dataSource = new DriverManagerDataSource();
             dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-            dataSource.setUrl("jdbc:mysql://localhost:3306/cms");
+            dataSource.setUrl("jdbc:mysql://localhost:3306/info");
             dataSource.setUsername("root");
-            dataSource.setPassword("123456");
+            dataSource.setPassword("0848101999");
             return dataSource;
         }
 
