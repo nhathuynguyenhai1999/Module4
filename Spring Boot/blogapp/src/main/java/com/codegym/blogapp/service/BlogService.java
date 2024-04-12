@@ -17,8 +17,8 @@ public class BlogService {
         return blogRepository.findAll();
     }
 
-    public Blog saveBlog(Blog blog) {
-        return blogRepository.save(blog);
+    public void saveBlog(Blog blog) {
+        blogRepository.save(blog);
     }
     public void deleteById(Long id){
         Blog blog = blogRepository.findById(id).get();
