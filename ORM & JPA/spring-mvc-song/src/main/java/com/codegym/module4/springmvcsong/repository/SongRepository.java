@@ -7,9 +7,9 @@ import java.util.List;
 
 @Repository
 public interface SongRepository extends JpaRepository<Song,Long> {
-//    List<Song> findAll();
+    List<Song> findAll();
 
-//    void save(Song song);
+    Object save(Song song);
 
-//    void deleteById(Long id);
+    void deleteById(Long id);
 }

@@ -1,4 +1,4 @@
-package com.codegym.module4.springmvcsong;
+package com.codegym.module4.customermanagementthymeleaf;
 
 import java.io.*;
 import javax.servlet.http.*;

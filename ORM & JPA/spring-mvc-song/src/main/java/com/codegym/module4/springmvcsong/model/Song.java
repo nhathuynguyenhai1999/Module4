@@ -3,14 +3,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 @Entity
 public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @NotBlank
+    @Size(max = 800)
+    @Pattern(regexp = "[^@;,.=+-]+$")
     private String title;
+    @NotBlank
+    @Size(max = 300)
+    @Pattern(regexp = "^[^@;,.=+-]+$")
     private String artist;
+    @NotBlank
+    @Size(max = 1000)
+    @Pattern(regexp = "^[^@;.=+-]+$")
     private String genre;
     private String filePath;
 
