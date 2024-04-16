@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shoe Form</title>
+</head>
+<body>
+<h2>Shoe Form</h2>
+<form action="/shoes/saveShoe" method="post">
+    <input type="hidden" name="id" th:value="${shoe.id}"/>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:value="${shoe.name}"/><br/><br/>
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" name="brand" th:value="${shoe.brand}"/><br/><br/>
+    <label for="price">Price:</label>
+    <input type="text" id="price" name="price" th:value="${shoe.price}"/><br/><br/>
+    <input type="submit" value="Save"/>
+</form>
+</body>
+</html>
