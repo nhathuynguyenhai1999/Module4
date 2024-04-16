@@ -20,7 +20,7 @@ public class LoginController {
     public String Index(@CookieValue(value = "setUser", defaultValue = "") String setUser, Model model) {
         Cookie cookie = new Cookie("setUser", setUser);
         model.addAttribute("cookieValue", cookie);
-        return "/login";
+        return "login";
     }
     @PostMapping("/doLogin")
     public String doLogin(@ModelAttribute("user") User user, Model model,
@@ -52,6 +52,6 @@ public class LoginController {
             model.addAttribute("cookieValue", cookie);
             model.addAttribute("message", "Login failed. Try again.");
         }
-        return "/login";
+        return "login";
     }
 }
