@@ -1,4 +1,4 @@
-package com.codegym.module4.session.configuration;
+package com.codegym.module4.sessioncookie.configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override

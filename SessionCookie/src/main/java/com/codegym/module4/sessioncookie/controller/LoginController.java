@@ -1,34 +1,38 @@
-package com.codegym.module4.controller;
-
-import com.codegym.module4.model.User;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+package com.codegym.module4.sessioncookie.controller;
+import com.codegym.module4.sessioncookie.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @Controller
 @SessionAttributes("user")
 public class LoginController {
-    //add user in model attribute
+    /*add user in model attribute*/
     @ModelAttribute("user")
-    public User setUpUserForm(){
+    public User setUpUserForm() {
         return new User();
     }
+
     @RequestMapping("/login")
     public String Index(@CookieValue(value = "setUser", defaultValue = "") String setUser, Model model) {
         Cookie cookie = new Cookie("setUser", setUser);
         model.addAttribute("cookieValue", cookie);
         return "/login";
     }
+
     @PostMapping("/doLogin")
     public String doLogin(@ModelAttribute("user") User user, Model model,
-                          @CookieValue(value = "setUser" , defaultValue = "")String setUser,
-    HttpServletResponse response,HttpServletRequest request){
+                          @CookieValue(value = "setUser", defaultValue = "") String setUser,
+                          HttpServletResponse response, HttpServletRequest request) {
+        // implement business logic
         if (user.getEmail().equals("admin@gmail.com")
                 && user.getPassword().equals("123456")) {
-            setUser = user.getEmail();
+            if (user.getEmail() != null)
+                setUser = user.getEmail();
 
             // create cookie and set it in response
             Cookie cookie = new Cookie("setUser", setUser);
