@@ -13,4 +13,8 @@ public class Blog {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 }
