@@ -1,5 +1,6 @@
 package com.codegym.blogapp.service;
 
+import com.codegym.blogapp.dto.res.BlogResDTO;
 import com.codegym.blogapp.model.Category;
 import com.codegym.blogapp.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
