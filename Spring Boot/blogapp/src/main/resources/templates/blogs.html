@@ -2,47 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Blogs | Java Web Back-end & Spring Model-View-Controller | 19-04-2024</title>
 </head>
 <body>
     <h1>SHOW BLOGS</h1>
     <h3>Categories</h3>
-    <p>
-        <a th:href="@{/blog/create}">
-            Add new category
-        </a>
-    </p>
-<!--    <p>-->
-<!--        <a th:href="@{/tasks}">-->
-<!--            Task list-->
-<!--        </a>-->
-<!--    </p>-->
-    <div class="notify">
-        <div th:if="${message}">
-            <span th:text="${message}"></span>
-        </div>
+    <!-- Form tìm kiếm -->
+    <form id="searchForm">
+        <input type="text" id="searchInput" name="searchInput" placeholder="Nhập từ khóa...">
+        <button type="submit">Tìm kiếm</button>
+    </form>
+    <!-- Danh sách bài viết -->
+    <div id="blogList">
+        <!-- Dữ liệu bài viết sẽ được hiển thị ở đây -->
+        <!-- Nút tải thêm -->
+        <button id="loadMoreBtn">Tải thêm</button>
     </div>
 
-    <table id = "tasks">
+    <table id = "blogs">
         <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Title</th>
+            <th>Category</th>
             <th>Action</th>
-<!--            <th>Delete</th>-->
         </tr>
         </thead>
         <tbody>
-        <tr th:each="b, cStatus : ${blogs}">
-            <td th:text="${cStatus.count}"></td>
-            <td><a th:href="@{/blog/view-blog/{id}(id=${b.id})}" th:text="${b.title}"></a></td>
-            <td th:text="${b.title}"></td>
-            <td><a th:href="@{/blog/update/{id}(id=${b.id})}">update</a></td>
-            <td><a th:href="@{/blog/delete/{id}(id=${b.id})}">delete</a></td>
-        </tr>
+
         </tbody>
     </table>
-<!--    <footer th:replace="/layout :: footer"></footer>-->
+    <script>
+        function getAllBlogs(){
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/api/blogs",
+                success: function(data){
+                    let arrStrHtml = data.map((b)=>{
+                        return `
+                            <tr>
+                                <td>${b.id}</td>
+                                <td>${b.title}</td>
+                                <td>${b.category.name}</td>
+                                <td>Action</td>
+                            </tr>
+                        `
+                    })
+                    let strHtml = arrStrHtml.join("");
+                    $("#blogs > tbody").html(strHtml)
+                }
+            })
+        }
+        getAllBlogs();
+        function updateBlog(){
+            // Assuming you have a textarea with id 'blogContent' where the user enters the blog content
+            var BlogContent = $('#BlogContent').val()
+            // AJAX request to send the blog content to the server
+            $.ajax({
+                url:'/update', // URL to send the request
+                type: 'POST', // HTTP method
+                data: { blog: BlogContent}, // Data to send (blog content)
+                success: function(response) {
+                    // If the request is successful, display a success manager
+                    alert('Blog saved successfully');
+                },
+                error: function(xhr, status , error){
+                    // if there is an error , display an error messsage
+                    alert('Error saving blog: ' + error);
+                }
+            });
+        }
+        updateBlog();
+        function deleteBlogs(){
+            // Ajax request to send the delete request
+            $.ajax({
+                url:'/del',//Url to send the request
+                type:'DELETE',//HTTP method
+                data: {id:id},//Data to send (Blog ID)
+                success: function(response) {
+                    // If the request is successful, display a success message
+                    alert('Blog deleted successfully');
+                },
+                error : function (xhr, status, error){
+                    alert('Error deleting blogs' + error);
+                }
+            })
+        }
+    </script>
 </body>
 </html>

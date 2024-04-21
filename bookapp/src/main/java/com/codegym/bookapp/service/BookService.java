@@ -3,7 +3,10 @@ package com.codegym.bookapp.service;
 import com.codegym.bookapp.BookNotAvailableException;
 import com.codegym.bookapp.BookNotFoundException;
 import com.codegym.bookapp.model.Book;
+import com.codegym.bookapp.repository.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service

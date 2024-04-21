@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Blogs | Java Web Back-end & Spring Model-View-Controller | 19-04-2024</title>
+</head>
+<body>
+    <h1>SHOW BLOGS</h1>
+    <h3>Categories</h3>
+    <!-- Form tìm kiếm -->
+    <form id="searchForm">
+        <input type="text" id="searchInput" name="searchInput" placeholder="Nhập từ khóa...">
+        <button type="submit">Tìm kiếm</button>
+    </form>
+    <!-- Danh sách bài viết -->
+    <div id="blogList">
+        <!-- Dữ liệu bài viết sẽ được hiển thị ở đây -->
+        <!-- Nút tải thêm -->
+        <button id="loadMoreBtn">Tải thêm</button>
+    </div>
+    <p>
+        <a th:href="@{/blog/create}">
+            Add new category
+        </a>
+    </p>
+    <p>
+        <a th:href="@{/tasks}">
+            Task list
+        </a>
+    </p>
+    <div class="notify">
+        <div th:if="${message}">
+            <span th:text="${message}"></span>
+        </div>
+    </div>
+
+    <table id = "tasks">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Action</th>
+<!--            <th>Delete</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="b, cStatus : ${blogs}">
+            <td th:text="${cStatus.count}"></td>
+            <td><a th:href="@{/blog/view-blog/{id}(id=${b.id})}" th:text="${b.title}"></a></td>
+            <td th:text="${b.title}"></td>
+            <td><a th:href="@{/blog/update/{id}(id=${b.id})}">update</a></td>
+            <td><a th:href="@{/blog/delete/{id}(id=${b.id})}">delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function() {
+            $('#searchForm').submit(function(event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+                $.ajax({
+                    type: 'GET',
+                    url: '/search', // Điều chỉnh đường dẫn URL của bạn tương ứng với BlogController
+                    data: formData,
+                    success: function(response) {
+                        // Xử lý dữ liệu trả về từ BlogController và hiển thị kết quả tìm kiếm
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+        $(document).ready(function() {
+            $('#loadMoreBtn').click(function() {
+                $.ajax({
+                    type: 'GET',
+                    url: '/loadMore', // Điều chỉnh đường dẫn URL của bạn tương ứng với BlogController
+                    success: function(response) {
+                        // Xử lý dữ liệu trả về từ BlogController và hiển thị các bài viết cũ hơn
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

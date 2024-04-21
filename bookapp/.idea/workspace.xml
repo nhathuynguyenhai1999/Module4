@@ -5,24 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8bd3fb2-ce6c-4e52-bb32-71768e365c5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/exception/Messenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/service/ImplBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/BookNotAvailableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/BookNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/configuration/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/controller/BlogController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/controller/BlogControllerV1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/model/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/repository/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/repository/BlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/repository/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/restcontroller/BlogAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/restcontroller/BlogAPIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/java/com/codegym/blogapp/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/resources/templates/blogs1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/model/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/repository/INoteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/borrow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error_404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/noteList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/return.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/showCode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Boot/blogapp/src/main/resources/templates/blogs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/BookNotAvailableException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/BookNotAvailableException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/configuration/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/configuration/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/bookapp/service/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +42,46 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2fFg6JePya6yVyBOmk44oIUmNNv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Documents/Module4/bookapp/src/main/webapp/WEB-INF/views&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\Module4\bookapp\src\main\webapp\WEB-INF\views" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codegym.bookapp.model" />
+      <recent name="com.codegym.bookapp.repository" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.87" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -99,6 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1713402064677</updated>
       <workItem from="1713402066025" duration="2850000" />
+      <workItem from="1713435124187" duration="3555000" />
+      <workItem from="1713592407824" duration="1125000" />
     </task>
     <servers />
   </component>

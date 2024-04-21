@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Book</title>
+</head>
+<body>
+<h1>Borrow Book</h1>
+<form id="borrow-form">
+    <label for="bookId">Book ID:</label>
+    <input type="text" id="bookId" name="bookId">
+    <button type="submit">Borrow</button>
+</form>
+
+<div id="message"></div>
+
+<script>
+    const borrowForm = document.getElementById('borrow-form');
+    const messageDiv = document.getElementById('message');
+
+    borrowForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const bookId = document.getElementById('bookId').value;
+
+        fetch(`/books/${bookId}/borrow`, {
+            method: 'POST'
+        })
+            .then(response => {
+                if (response.ok) {
+                    messageDiv.textContent = 'Book borrowed successfully.';
+                } else {
+                    messageDiv.textContent = 'Error: Book not available or not found.';
+                }
+            });
+    });
+</script>
+</body>
+</html>
