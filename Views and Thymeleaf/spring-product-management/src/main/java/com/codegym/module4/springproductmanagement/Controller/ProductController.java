@@ -1,80 +1,58 @@
 package com.codegym.module4.springproductmanagement.Controller;
 
 import com.codegym.module4.springproductmanagement.Model.Product;
-import com.codegym.module4.springproductmanagement.Service.IProductService;
+import com.codegym.module4.springproductmanagement.Service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@RequestMapping("/products")
 public class ProductController {
-    private final IProductService productService;
-    private final List<Product> products = new ArrayList<>();
-    public ProductController(IProductService productService) {
-        this.productService = productService;
+    @Autowired
+    private ProductService productService;
+    @GetMapping
+    public String product(Model model) {
+        List<Product> productList = productService.findAll();
+        model.addAttribute("productList",
+                productList);
+        return "list";
     }
 
-    @GetMapping("/")
-    public String showProductList(Model model) {
-        // implementation to show product list
-        model.addAttribute("products", productService.getAllProducts());
-        return "product-list";
+    @GetMapping("/create")
+    public String add(Model model) {
+        model.addAttribute("product",
+                new Product());
+        return "create";
     }
 
-    @GetMapping("/add")
-    public String showAddProductForm(Model model) {
-        // implementation to show add product form
-        model.addAttribute("product", new Product());
-        return "add-product";
+    @PostMapping("/create")
+    public String save(@ModelAttribute Product product) {
+        productService.add(product);
+        return "redirect:/products";
     }
 
-    @PostMapping("/add")
-    public String addProduct(Product product) {
-        // implementation to add product
-        productService.addProduct(product);
-        return "redirect:/";
-    }
-
-    @GetMapping("/update")
-    public String showUpdateProductForm(@RequestParam Long id, Model model) {
-        // implementation to show update product form
-        Product product = productService.getProductById(id);
-        model.addAttribute("product", product);
-        return "update-product";
+    @GetMapping("/{id}/edit")
+    public String edit(@PathVariable int id,
+                       Model model) {
+        Product product = productService.findById(id);
+        model.addAttribute("product",
+                product);
+        return "edit";
     }
 
     @PostMapping("/update")
-    public String updateProduct(Product product) {
-        // implementation to update product
-        productService.updateProduct(product);
-        return "redirect:/";
+    public String update(@ModelAttribute Product product) {
+        productService.update(product);
+        return "redirect:/products";
     }
 
-    @GetMapping("/delete")
-    public String deleteProduct(@RequestParam Long id) {
-        // implementation to delete product
-        products.removeIf(product -> product.getId().equals(id));
-        productService.deleteProduct(id);
-        return "redirect:/";
-    }
-
-    @GetMapping("/detail")
-    public String showProductDetail(@RequestParam Long id, Model model) {
-        // implementation to show product detail
-        Product product = productService.getProductById(id);
-        model.addAttribute("product", product);
-        return "product-detail";
-    }
-
-    @GetMapping("/search")
-    public String searchProduct(@RequestParam String keyword, Model model) {
-        // implementation to search product by name
-        model.addAttribute("products", productService.searchByName(keyword));
-        return "search-result";
+    @GetMapping("/{id}/delete")
+    public String delete(@PathVariable int id) {
+        productService.delete(id);
+        return "redirect:/products";
     }
 }

@@ -1,20 +1,26 @@
 package com.codegym.module4.springproductmanagement.Model;
 
 public class Product {
-    private Long id;
+    private int id;
     private String name;
-    private double price;
-    private String description;
-    private String manufacturer;
+    private int quantity;
 
     public Product() {
     }
 
-    public Long getId() {
+    public Product(int id,
+                   String name,
+                   int quantity) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -26,35 +32,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
-        return price;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public Product(Long id, String name, double price, String description, String manufacturer) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.manufacturer = manufacturer;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
